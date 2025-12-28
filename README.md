@@ -1,37 +1,93 @@
-🎵 AirTune – Hand Gesture Controlled Musical Instrument
+🎹 AirTune – Gesture-Controlled Virtual Synthesizer
 
-AirTune is a real-time, computer vision–based musical instrument that allows users to create music using hand gestures captured through a webcam. Built using Python, MediaPipe, OpenCV, and Pygame, this project detects hand landmarks and maps specific finger movements to musical notes, enabling an interactive and touchless music experience.
+AirTune is a real-time, gesture-controlled virtual musical instrument built using Computer Vision and Digital Sound Synthesis.
+It allows users to play musical notes in the air using hand gestures, without touching any physical keys or controllers.
 
-The system tracks hand positions in real time, identifies finger gestures, and triggers corresponding audio samples, effectively turning hand movements into sound. This project demonstrates the practical application of computer vision, gesture recognition, and human–computer interaction in an intuitive and creative way.
+The system uses a webcam to track hand movements and converts finger gestures into musical notes in real time, functioning like a virtual piano/synthesizer.
 
-✨ Features
+✨ Key Features
 
-Real-time hand tracking using MediaPipe
+🎥 Real-time hand tracking using MediaPipe
 
-Gesture-based sound triggering
+🎶 Synth-based sound generation (no audio samples required)
 
-Multi-finger detection with state control
+🎹 Two-hand support with independent note mapping
 
-Low-latency audio playback
+🔄 Live mode switching (Piano / Synth)
 
-Simple and extendable architecture
+🎧 Sustained notes while fingers are held down
 
-🛠️ Tech Stack
+🧠 Gesture-based interaction — no keyboard or mouse needed
+
+⚡ Real-time performance with low latency
+
+🧠 How It Works
+
+Hand Detection
+Uses MediaPipe to detect 21 landmarks on each hand in real time.
+
+Gesture Interpretation
+Each finger is mapped to a musical note.
+A note is triggered when the finger bends downward.
+
+Sound Generation
+
+Synth mode: Generates sine waves in real time using NumPy
+
+Piano mode: Plays pre-recorded piano samples
+
+Live Audio Engine
+Audio is generated and controlled using pygame.mixer, allowing continuous sustain while a finger is held.
+
+Visual Feedback
+Hand landmarks and note positions are rendered live on the camera feed.
+
+🎹 Controls
+Action	Control
+Play notes	Raise/lower fingers
+Switch to Piano	Press P
+Switch to Synth	Press S
+Exit	ESC
+🧩 Technologies Used
 
 Python
 
-OpenCV
+OpenCV – Real-time video processing
 
-MediaPipe
+MediaPipe – Hand landmark detection
 
-Pygame
+Pygame – Audio synthesis & playback
 
-🎯 Use Cases
+NumPy – Signal generation
 
-Gesture-controlled music creation
+🚀 Features Implemented
 
-Interactive installations
+Real-time gesture recognition
 
-Human–computer interaction demos
+Polyphonic audio output
 
-Educational projects in computer vision
+Custom sine-wave synthesizer
+
+Sample-based piano mode
+
+Hand-based note mapping
+
+Stable real-time performance
+
+🔮 Future Enhancements
+
+Velocity-sensitive dynamics
+
+ADSR envelope control
+
+MIDI export
+
+Visual piano UI
+
+Chord recognition
+
+Effects (reverb, delay, filters)
+
+🧠 Why This Project Matters
+
+This project combines computer vision, digital signal processing, and human–computer interaction into one system. It demonstrates real-world applications of AI and signal processing in creative technology.
